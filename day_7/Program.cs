@@ -181,40 +181,57 @@
 //             arr[i] = output[i];
 //     }
 // }
-  
-  class Program
+
+
+
+// Index
+using System.Dynamic;
+using System.Globalization;
+
+class Program
 {
     static void Main()
     {
-        StudentMarks students = new StudentMarks();
+        // creating a object hold data using indexers
+        StudentMarks students = new StudentMarks();// simple object of the student marks
+        students.StudentName = "Ashwin";
+        Console.WriteLine("My name is: ");
+         Console.WriteLine(students.StudentName);
 
         // Using indexer to set values
         students[0] = 90;
         students[1] = 100;
         students[2] = 200;
         students[3] = 160;
+       // students.Clgname = "IIT Delhi";
 
         Console.WriteLine("Student Marks:");
         Console.WriteLine(students[0]);
         Console.WriteLine(students[1]);
         Console.WriteLine(students[2]);
         Console.WriteLine(students[3]);
+       
     }
 }
 class StudentMarks
 {
+    public string StudentName{get; set;} // simple property
     private int[] marks = new int[5];   // internal array
+    // indexers array like access to marks
 
+    
+    
     // Indexer
-    public int this[int index]
+    public int this[int subjectIndex]
     {
         get
         {
-            return marks[index];
+            return marks[subjectIndex];
         }
         set
         {
-            marks[index] = value;
+            marks[subjectIndex] = value;
         }
     }
 }
+
