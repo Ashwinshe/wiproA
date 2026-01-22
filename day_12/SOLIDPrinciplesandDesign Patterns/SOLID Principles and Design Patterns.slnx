@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DesignPatternsAssignment/DesignPatternsAssignment.csproj" />
+  <Project Path="SOLID Principles and Design Patterns/SOLID Principles and Design Patterns.csproj" />
+  <Project Path="SolidPrinciplesAssignment.Tests/SolidPrinciplesAssignment.Tests.csproj" />
+</Solution>
