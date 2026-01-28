@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyWebDemo</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">MyWebDemo</a>
+
+    <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+  <div class="container">
+    <h1>Welcome to HTML5 & Bootstrap Demo</h1>
+    <p>Static webpage covering modern UI components</p>
+    <button id="heroBtn" class="btn btn-light mt-3">Get Started</button>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main class="container mt-5" id="services">
+
+  <p class="text-muted">-- Main class container</p>
+  <h2 class="mb-4">Our Services</h2>
+
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Web Design</h5>
+          <p class="card-text">Modern and responsive layouts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Development</h5>
+          <p class="card-text">Clean HTML, CSS and JS code.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card">
+        <div class="card-body">
+          <h5 class="card-title">Support</h5>
+          <p class="card-text">Reliable technical assistance.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+<section class="mb-5">
+        <h2>Course Details</h2>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML5</td>
+                    <td>10 Hours</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Bootstrap</td>
+                    <td>8 Hours</td>
+                    <td>Active</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>Key Features</h5>
+        <ul>
+            <li>Responsive Design</li>
+            <li>HTML5 Media</li>
+            <li>Bootstrap Components</li>
+        </ul>
+    </section>
+   <section class="mb-5">
+  <h2>Media Section (Using Links)</h2>
+
+  <h5>Course Audio (Online)</h5>
+  <audio controls class="w-100 mb-4">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <h5>Course Video (Online)</h5>
+  <video controls width="100%" height="300" class="mb-3">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  © 2026 MyWebDemo
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
