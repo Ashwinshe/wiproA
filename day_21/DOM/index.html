@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Event Registration Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        #container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            background: #e3e3e3;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background: #ccc;
+        }
+
+        input {
+            margin-bottom: 8px;
+            padding: 5px;
+            width: 95%;
+        }
+
+        button {
+            padding: 6px 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <h1>Society Events</h1>
+
+    <!-- ADD EVENT SECTION -->
+    <h3>Add New Event</h3>
+    <input type="text" id="newEventName" placeholder="Event Name">
+    <input type="number" id="newEventCount" placeholder="Participants">
+    <button id="addEventBtn">Add Event</button>
+
+    <hr>
+
+    <!-- EVENT LIST -->
+    <h3>Available Events</h3>
+    <ul id="eventList"></ul>
+
+    <!-- EVENT DETAILS -->
+    <h3>Event Details</h3>
+    <p>Event Name: <span id="eventName">None</span></p>
+    <p>Participants: <span id="participantCount">0</span></p>
+
+    <button id="registerBtn">Register</button>
+    <button id="unregisterBtn">Unregister</button>
+
+</div>
+
+<script>
+    // DOM ACCESS
+    const eventList = document.getElementById("eventList");
+    const eventName = document.getElementById("eventName");
+    const participantCount = document.getElementById("participantCount");
+
+    const registerBtn = document.getElementById("registerBtn");
+    const unregisterBtn = document.getElementById("unregisterBtn");
+
+    const newEventName = document.getElementById("newEventName");
+    const newEventCount = document.getElementById("newEventCount");
+    const addEventBtn = document.getElementById("addEventBtn");
+
+    // EVENT DATA
+    const events = [
+        { name: "Yoga Session", participants: 10 },
+        { name: "Music Night", participants: 18 }
+    ];
+
+    let selectedEvent = null;
+
+    // FUNCTION TO CREATE EVENT LIST ITEM
+    function createEventItem(event) {
+        const li = document.createElement("li");
+        li.innerText = event.name;
+
+        li.addEventListener("click", () => {
+            selectedEvent = event;
+            eventName.innerText = event.name;
+            participantCount.innerText = event.participants;
+        });
+
+        eventList.appendChild(li);
+    }
+
+    // DISPLAY EXISTING EVENTS
+    events.forEach(createEventItem);
+
+    // ADD EVENT BUTTON
+    addEventBtn.addEventListener("click", () => {
+        if (newEventName.value === "" || newEventCount.value === "") {
+            alert("Please enter all details");
+            return;
+        }
+
+        const newEvent = {
+            name: newEventName.value,
+            participants: parseInt(newEventCount.value)
+        };
+
+        events.push(newEvent);
+        createEventItem(newEvent);
+
+        newEventName.value = "";
+        newEventCount.value = "";
+    });
+
+    // REGISTER
+    registerBtn.addEventListener("click", () => {
+        if (selectedEvent) {
+            selectedEvent.participants++;
+            participantCount.innerText = selectedEvent.participants;
+        }
+    });
+
+    // UNREGISTER
+    unregisterBtn.addEventListener("click", () => {
+        if (selectedEvent && selectedEvent.participants > 0) {
+            selectedEvent.participants--;
+            participantCount.innerText = selectedEvent.participants;
+        }
+    });
+</script>
+
+</body>
+</html>
