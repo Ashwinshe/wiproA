@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
