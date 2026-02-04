@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery UI Demo</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        /* Slider */
+        #slider {
+            width: 300px;
+            margin: 10px 0;
+        }
+
+        /* Carousel */
+        .carousel {
+            width: 300px;
+            text-align: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 180px;
+            border: 1px solid #ccc;
+        }
+
+        .dots button {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1️⃣ Date Picker -->
+<h3>Appointment Date Selection</h3>
+<label>Select Date:</label><br><br>
+<input type="text" id="datePicker">
+
+<hr>
+
+<!-- 2️⃣ Slider -->
+<h3>2. Slider (Price Range)</h3>
+<div id="slider"></div>
+<p>Selected Price: <strong id="price">₹355</strong></p>
+
+<hr>
+
+<!-- 3️⃣ Image Carousel -->
+<h3>3. Image Carousel</h3>
+
+<div class="carousel">
+    <button id="prev">Previous</button><br><br>
+
+<img id="carouselImage" src="images/bird-8788491_1920.jpg" width="300" height="180">
+    <br><br>
+    <button id="next">Next</button>
+
+    <div class="dots">
+        <button onclick="showImage(0)">1</button>
+        <button onclick="showImage(1)">2</button>
+        <button onclick="showImage(2)">3</button>
+    </div>
+</div>
+
+<script>
+$(document).ready(function () {
+
+    /* DatePicker Plugin */
+    $("#datePicker").datepicker({
+        dateFormat: "dd-mm-yy",
+        minDate: 0
+    });
+
+    /* Slider Plugin */
+    $("#slider").slider({
+        min: 100,
+        max: 1000,
+        value: 355,
+        slide: function (event, ui) {
+            $("#price").text("₹" + ui.value);
+        }
+    });
+
+});
+
+/* Carousel Logic (Custom JS) */
+const images = [
+    "images/bird-8788491_1920.jpg",
+    "images/pexels-iriser-1366957.jpg",
+    "images/pexels-kasperphotography-1042423.jpg"
+];
+
+let index = 0;
+
+function showImage(i) {
+    index = i;
+    document.getElementById("carouselImage").src = images[index];
+}
+
+document.getElementById("next").onclick = function () {
+    index = (index + 1) % images.length;
+    showImage(index);
+};
+
+document.getElementById("prev").onclick = function () {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+};
+</script>
+
+</body>
+</html>

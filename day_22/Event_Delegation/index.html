@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Delegation Example</title>
+    <style>
+        ul {
+            width: 200px;
+            border: 1px solid #333;
+            padding: 10px;
+        }
+        li {
+            cursor: pointer;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Event Delegation Example</h3>
+
+<ul id="courseList">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<button id="addItem">Add Course</button>
+
+<script>
+/* EVENT DELEGATION */
+document.getElementById("courseList").addEventListener("click", function (e) {
+
+    // Check if LI is clicked
+    if (e.target.tagName === "LI") {
+        alert("You clicked: " + e.target.innerText);
+    }
+
+});
+
+/* ADDING ITEMS DYNAMICALLY */
+document.getElementById("addItem").addEventListener("click", function () {
+    const li = document.createElement("li");
+    li.textContent = "New Course";
+    document.getElementById("courseList").appendChild(li);
+});
+</script>
+
+</body>
+</html>

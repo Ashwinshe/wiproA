@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Course List</title>
+         <Style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            ul{
+                width: 300px;
+                padding: 10px;
+                border: 2px solid #333;
+            }
+         </Style>
+    </head>
+
+    <body>
+        <h2>Available Data</h2>
+        <ul id = "output"></ul>
+
+        <script>
+            const course = `[
+                {"Coursename": "HTML" },
+                {"Coursename": "Java" },
+                {"Coursename": "C" }
+            ]`
+
+            const courselist = JSON.parse(course);
+
+            const output = document.getElementById("output");
+
+            courselist.forEach(element => {
+                const li = document.createElement("li");
+                li.textContent = element.Coursename;
+                output.appendChild(li);
+            });
+        </script>
+    </body>
+</html>
