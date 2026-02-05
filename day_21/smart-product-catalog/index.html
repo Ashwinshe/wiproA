@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Product Catalog</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1> Smart Product Catalog</h1>
+    <p>Client-Side Only Product Dashboard</p>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchBox" placeholder="Search product...">
+
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Fashion">Fashion</option>
+    </select>
+
+    <select id="sortBy">
+      <option value="default">Sort By</option>
+      <option value="priceLow">Price: Low to High</option>
+      <option value="priceHigh">Price: High to Low</option>
+      <option value="ratingHigh">Rating: High to Low</option>
+    </select>
+
+    <button id="reloadBtn">Reload Products</button>
+  </section>
+
+  <section class="status">
+    <h3>Cart Items: <span id="cartCount">0</span></h3>
+  </section>
+
+  <section id="loader" class="loader hidden">
+    <p> Loading Products...</p>
+  </section>
+
+  <main id="productContainer" class="product-container"></main>
+
+  <div id="errorBox" class="error-box hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
