@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Electrician", "price": 300, "rating": 4.5 },
+  { "id": 2, "name": "Plumber", "price": 250, "rating": 4.2 },
+  { "id": 3, "name": "Tutor", "price": 500, "rating": 4.7 },
+  { "id": 4, "name": "Carpenter", "price": 400, "rating": 4.3 },
+  { "id": 5, "name": "Painter", "price": 350, "rating": 4.4 }
+]
