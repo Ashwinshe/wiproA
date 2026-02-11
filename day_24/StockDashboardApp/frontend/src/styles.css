@@ -1,0 +1,27 @@
+.dashboard-container {
+  min-height: 100vh;
+  transition: 0.4s;
+}
+
+.dashboard-container.light {
+  background: #f8f9fa;
+  color: black;
+}
+
+.dashboard-container.dark {
+  background: #121212;
+  color: white;
+}
+
+.dashboard-container.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.stock-card {
+  border-left: 6px solid green;
+}
+
+.card {
+  border-radius: 15px;
+}
