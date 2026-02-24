@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Soft background for dashboard feel */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 
+NAVBAR STYLING */
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+
+/* 
+DASHBOARD CARDS
+Used in Home View KPI section
+*/
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for professional UI */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 
+TABLE STYLING
+Improves product table readability
+*/
+
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+
+/* 
+FORM STYLING
+Used in Order & Inventory forms
+*/
+
+form {
+    max-width: 500px;
+    background-color: #ffffff;
+}
+
+.form-control {
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Input focus effect */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+
+/* 
+Improves default Bootstrap button appearance
+*/
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* 
+SPA TRANSITION EFFECT
+Smooth content change when switching views
+*/
+
+#app {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 
+UTILITY CLASSES
+Reusable styling helpers
+*/
+
+.shadow-soft {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.rounded-lg {
+    border-radius: 16px;
+}

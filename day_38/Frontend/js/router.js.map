@@ -1,0 +1,1 @@
+{"version":3,"file":"router.js","sourceRoot":"","sources":["../ts/router.ts"],"names":[],"mappings":"AACA,sDAAsD;AACtD,wDAAwD;AACxD,MAAM,UAAU,QAAQ,CAAC,QAAgB;IAErC,kCAAkC;IAClC,MAAM,YAAY,GAAG,QAAQ,CAAC,cAAc,CAAC,SAAS,CAAgB,CAAC;IAEvE,2BAA2B;IAC3B,YAAY,CAAC,SAAS,GAAG,QAAQ,CAAC;AACtC,CAAC"}
