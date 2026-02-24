@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="SmartMart.API/SmartMart.API.csproj" />
+  <Project Path="SmartMart.Common/SmartMart.Common.csproj" />
+  <Project Path="SmartMart.Models/SmartMart.Models.csproj" />
+  <Project Path="SmartMart.Repositories/SmartMart.Repositories.csproj" />
+  <Project Path="SmartMart.Services/SmartMart.Services.csproj" />
+</Solution>
